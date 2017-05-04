@@ -10,7 +10,7 @@ module.exports = {
   output: {
     // Where the compiled bundle gets stored
     path: path.resolve('./assets/bundles/'),
-    filename: '[name]-[hash].js'm
+    filename: '[name]-[hash].js'
   },
   plugins: [
     // Tells webpack where to store data about the bundles
@@ -22,21 +22,18 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [
+    rules: [
       // A regex that tells webpack to use the following loaders on all .js and .jsx files
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        query: : {
-          // Specify that we will be dealing with React code
-          presets: ['react']
-        }
-      }
+        use: ['babel-loader'],
+      },
     ]
   },
   resolve: {
     // Tells webpack where to look for modules
-    modulesDirectories: ['node_modules'],
-    extensions: ['', '.js', '.jsx']
+    modules: ['node_modules'],
+    extensions: ['.js', '.jsx']
   }
 }
