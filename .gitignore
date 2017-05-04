@@ -150,6 +150,3 @@ typings/
 
 *.sqlite3
 media/
-
-bundles/
-webpack-stats.json
