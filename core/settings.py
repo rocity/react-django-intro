@@ -25,7 +25,7 @@ SECRET_KEY = '0l61xfic)-ws!)*_9*o#vmb=q59wi8nm7-8jgymq(qx_x1f9!t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['reactdj.herokuapp.com']
+ALLOWED_HOSTS = ['reactdj.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -126,6 +126,7 @@ STATIC_URL = '/static/'
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'assets'),
+    os.path.join(BASE_DIR, 'assets'),
 )
 
 
