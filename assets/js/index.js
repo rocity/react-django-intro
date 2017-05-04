@@ -3,6 +3,7 @@ var ReactDOM = require('react-dom')
 
 const element = React.createElement(
   'h1',
+  {className: 'greeting'},
   'Hello react!'
 );
 
